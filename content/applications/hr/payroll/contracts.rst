@@ -3,8 +3,8 @@ Contracts
 =========
 
 Every employee in Odoo is required to have a contract in order to be paid. A contract outlines the
-terms of an employee's position, their compensation, their working hours, and any other details
-about their position.
+terms of an employee's position, their compensation, working hours, and any other details about
+their position.
 
 .. important::
    Contract documents (PDFs) are uploaded and organized using the *Documents* application, and are
@@ -12,10 +12,10 @@ about their position.
    sign contracts. Please refer to the :doc:`/applications/productivity/documents` and
    :doc:`/applications/productivity/sign` documentation.
 
-To view the employee contracts, go to the :menuselection:`Payroll app --> Employees --> Contracts`
+To view the employee contracts, go to the :menuselection:`Payroll app --> Contracts --> Contracts`
 from the top menu. All employee contracts, and their current contract status, are displayed in a
-default kanban view. The default view displays both running contracts and contracts that need
-action. Expired and canceled contracts are hidden in the default view.
+Kanban view, by default. The Kanban view displays running contracts, contracts that require action,
+expired contracts, and cancelled contracts, all in the default view.
 
 .. image:: contracts/contracts-overview.png
    :align: center
@@ -23,10 +23,7 @@ action. Expired and canceled contracts are hidden in the default view.
 
 .. note::
    The list of contracts in the *Payroll* application matches the list of contracts in the
-   *Employees* application. The default contracts view in the *Payroll* application displays running
-   contracts and contracts needing attention, while the default contracts view in the *Employees*
-   application displays all contracts in a kanban view, organized by their stage, regardless of
-   status. All contracts can be viewed by changing the filters.
+   *Employees* application.
 
 Create a new contract
 =====================
@@ -42,19 +39,19 @@ Required fields
    :align: center
    :alt: New contract form to be filled in when creating a new contract.
 
-- :guilabel:`Contact Reference`: Type in the name or title for the contract, such as `John Smith
+- :guilabel:`Contact Reference`: type in the name or title for the contract, such as `John Smith
   Contract`.
-- :guilabel:`Company`: Select the company the contract applies to by clicking on the drop-down menu.
+- :guilabel:`Company`: select the company the contract applies to by clicking on the drop-down menu.
   A new company can be created by typing the name in the field, then clicking either
   :guilabel:`Create` to create the new company, or :guilabel:`Create and Edit` to create the new
   company and edit the company details.
-- :guilabel:`Salary Structure Type`: Select one of the salary structure types from the drop-down
+- :guilabel:`Salary Structure Type`: select one of the salary structure types from the drop-down
   menu. The default salary structure types are :guilabel:`Employee` or :guilabel:`Worker`. A new
   salary structure type can be created by typing the name in the field.
-- :guilabel:`Start Date`: The date the contract starts. Choose a date by clicking on the drop-down
-  menu, navigating to the correct month and year by using the :guilabel:`< > (arrow)` icons, then
-  clicking on the :guilabel:`date`.
-- :guilabel:`Working Schedule`: Select one of the working schedules from the drop-down menu.
+- :guilabel:`Start Date`: the date the contract starts. Choose a date by clicking on the drop-down
+  menu, navigating to the correct month and year by using the :icon:`fa-chevron-left`
+  :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then clicking on the :guilabel:`date`.
+- :guilabel:`Working Schedule`: select one of the working schedules from the drop-down menu.
 
 .. tip::
    The :guilabel:`Working Schedule` drop-down menu displays all the working times for the selected
@@ -65,10 +62,10 @@ Required fields
 Optional fields
 ---------------
 
-- :guilabel:`Employee`: Name of the employee that the contract applies to.
-- :guilabel:`Department`: The department the contract applies to.
-- :guilabel:`Job Position`: The specific job position the contract applies to.
-- :guilabel:`Contract Type`: Choose from :guilabel:`CDI`, :guilabel:`CDD`, or :guilabel:`PFI` from
+- :guilabel:`Employee`: name of the employee that the contract applies to.
+- :guilabel:`Department`: the department the contract applies to.
+- :guilabel:`Job Position`: the specific job position the contract applies to.
+- :guilabel:`Contract Type`: choose from :guilabel:`CDI`, :guilabel:`CDD`, or :guilabel:`PFI` from
   the drop-down menu.
 
   - :guilabel:`CDI` is an open-ended contract with only a start date but no end date.
@@ -76,30 +73,41 @@ Optional fields
   - :guilabel:`PFI` is a Belgian-specific contract used when hiring employees that need training,
     and covers the training period specifically.
 
-- :guilabel:`End Date`: If the contract has a specific end date, click the drop-down menu, navigate
+- :guilabel:`End Date`: if the contract has a specific end date, click the drop-down menu, navigate
   to the correct month and year using the arrow icons, then click on the date.
-- :guilabel:`HR Responsible`: If there is a specific person in HR that is responsible for the
+- :guilabel:`HR Responsible`: if there is a specific person in HR that is responsible for the
   contract, select the person from the drop-down menu.
-- :guilabel:`Analytic Account`: This field allows a link between the contract and a specific
+- :guilabel:`Analytic Account`: this field allows a link between the contract and a specific
   analytic account for accounting purposes.
 
 Contract details
 ----------------
 
-The contract details section allows for the addition and editing of a contract, and the ability to
-send the contract to the employee for approval and signatures.
+The :guilabel:`Contract Details` tab allows for the addition and editing of a contract, along with
+specifying which template to use when a new contract is created. These fields **must** be populated
+in order to create a new contract.
+
+.. important::
+   To access the various contract template fields in the :guilabel:`Contract Details` tab, the
+   *Salary Configurator* (`hr_contract_salary`) module **must** be :ref:`installed
+   <general/install>`.
+
+   When the *Salary Configurator* module is installed, the *Salary Configurator - Holidays* and
+   *Salary Configurator - Payroll* modules install, as well.
+
+   Once the modules are installed, the database reverts to the main dashboard.
 
 .. image:: contracts/contract-details.png
    :align: center
    :alt: Contract details in optional tabs for a new contract.
 
-- :guilabel:`Contract Template`: Select a pre-existing contract template from the drop-down menu.
+- :guilabel:`Contract Template`: select a pre-existing contract template from the drop-down menu.
   Contract templates are typically created through the *Recruitment* application.
-- :guilabel:`New Contract Document Template`: Select a contract from the drop-down menu to be
+- :guilabel:`New Contract Document Template`: select a contract from the drop-down menu to be
   modified for this new employee contract.
-- :guilabel:`Contract Update Document Template`: Select a contract from the drop-down menu if the
+- :guilabel:`Contract Update Document Template`: select a contract from the drop-down menu if the
   employee has an existing contract that requires updating.
-- :guilabel:`Notes`: The notes field is a text field where any notes for the employee contract can
+- :guilabel:`Notes`: the notes field is a text field where any notes for the employee contract can
   be entered for future reference.
 
 Modifying a contract
@@ -118,23 +126,24 @@ A pop-up window appears with all the contract details. Modify the fields for the
    :align: center
    :alt: Edit the details for the contract.
 
-- :guilabel:`Tags`: Select any tags associated with the contract.
-- :guilabel:`Signed Document Workspace`: This is where the signatures are stored. Choose a
+- :guilabel:`Tags`: select any tags associated with the contract.
+- :guilabel:`Signed Document Workspace`: this is where the signatures are stored. Choose a
   pre-configured workspace or create a new one.
-- :guilabel:`Signed Document Tags`: Select or create any tags associated only with the signed
+- :guilabel:`Signed Document Tags`: select or create any tags associated only with the signed
   contract as opposed to the original unsigned contract.
-- :guilabel:`Redirect Link`: Enter a redirect link for the employee to access the contract. A
+- :guilabel:`Redirect Link`: enter a redirect link for the employee to access the contract. A
   redirect link takes the user from one URL to another, in this case, to the newly updated contract
   specifically written for them.
-- :guilabel:`Who can Sign`: Select either :guilabel:`All Users` or :guilabel:`On Invitation`.
+- :guilabel:`Who can Sign`: select either :guilabel:`All Users` or :guilabel:`On Invitation`.
 
-  - :guilabel:`All Users`: Any user in the organization can sign the contract.
-  - :guilabel:`On Invitation`: Only users selected in this field can sign the contract.
+  - :guilabel:`All Users`: any user in the organization can sign the contract.
+  - :guilabel:`On Invitation`: only users selected in this field can sign the contract.
 
-- :guilabel:`Invited Users`: Select the person(s) that can sign the document.
-- :guilabel:`Document`: The attached document can be replaced by clicking the :guilabel:`✏️
-  (pencil)` icon. A pop-up window appears so another document can be selected for upload. The file
-  must be a PDF. To remove the document, click the :guilabel:`🗑️ (trash can)` icon.
+- :guilabel:`Invited Users`: select the person (or people) that can sign the document.
+- :guilabel:`Document`: the attached document can be replaced by clicking the :icon:`fa-pencil`
+  :guilabel:`(pencil)` icon. A pop-up window appears so another document can be selected for upload.
+  The file must be a PDF. To remove the document, click the :icon:`fa-trash-o` :guilabel:`(trash
+  can)` icon.
 
 Once the edits are complete, click the :guilabel:`Save` button. All the information for the selected
 contract template populates the fields in the :guilabel:`Salary Information` tab. Any additional
@@ -173,19 +182,20 @@ To add a new deduction, click :guilabel:`Add a line`. Type in a description for 
 
 Select the :guilabel:`Garnished Type` from the drop-down menu. Choose from:
 
-- :guilabel:`Attachment of Salary`: Any payments taken out towards something that is *not* child
+- :guilabel:`Attachment of Salary`: any payments taken out towards something that is *not* child
   support. Typically any garnishments such as lawsuit payments, payments toward taxes owed, etc.
-- :guilabel:`Assignment of Salary`: Any deduction that is not required but voluntary, such as a
+- :guilabel:`Assignment of Salary`: any deduction that is not required but voluntary, such as a
   pre-tax allocation to a college savings account.
-- :guilabel:`Child Support`: Any payments taken out specifically for child support.
+- :guilabel:`Child Support`: any payments taken out specifically for child support.
 
 Enter the start and end dates the entry applies to. Click on the drop-down menu under
 :guilabel:`From` and :guilabel:`To`, navigate to the correct month and year by using the
-:guilabel:`< > (arrow)` icons, then click on the :guilabel:`date`.
+:icon:`fa-chevron-left` :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then click on the
+:guilabel:`date`.
 
 Last, enter the :guilabel:`Amount` that each payslip pays towards the entry.
 
-To delete a line, click the :guilabel:`🗑️ (trash can)` icon at the end of the line.
+To delete a line, click the :icon:`fa-trash-o` :guilabel:`(trash can)` icon at the end of the line.
 
 Save and send the contract
 --------------------------
@@ -199,7 +209,7 @@ Click on one of the following buttons to send the contract to the employee:
    :align: center
    :alt: Send the contract to the employee via one of the buttons.
 
-- :guilabel:`Generate Simulation Link`: This option is for Belgian companies only. Clicking this
+- :guilabel:`Generate Simulation Link`: this option is for Belgian companies only. Clicking this
   opens a pop-up window that contains the basic information from the contract as well as a link for
   the contract when using the salary configurator. Click :guilabel:`Send Offer` to send an email to
   the employee so they can sign the contract.
@@ -212,7 +222,7 @@ Click on one of the following buttons to send the contract to the employee:
      In order to send a contract using the :guilabel:`Generate Simulation Link`, there must be a
      signature field in the contract PDF being sent to the employee so they can sign it.
 
-- :guilabel:`Signature Request`: Click this and a pop-up window appears where an email can be typed
+- :guilabel:`Signature Request`: click this and a pop-up window appears where an email can be typed
   to the employee. Select the document, such as a contract, NDA, or Homeworking Policy, from the
   drop-down menu, and fill out the email section. Click :guilabel:`Send` when the email is ready to
   be sent.
@@ -221,5 +231,5 @@ Click on one of the following buttons to send the contract to the employee:
      :align: center
      :alt: Request a signature for the contract via email.
 
-- :guilabel:`Credit Time`: This option is for Belgian companies only. When clicked, a pop-up window
+- :guilabel:`Credit Time`: this option is for Belgian companies only. When clicked, a pop-up window
   appears that allows for the changing of working times, and can compute time off.
