@@ -128,12 +128,16 @@ of existing detailed instructions there are for the operation.
    :align: center
    :alt: Show the Instructions column, and list icon.
 
-Click :guilabel:`New` to open a quality control point form. Here, give the specific instruction a
-:guilabel:`Title` and change the :guilabel:`Type` to :guilabel:`Instructions`. For more details
-about quality control points refer to the following:
+On the :guilabel:`Steps` dashboard, click :guilabel:`New` to open a blank quality control point form
+where the new manufacturing step can be created. Here, give the specific instruction a
+:guilabel:`Title` and set the :guilabel:`Type` to :guilabel:`Instructions`. In the
+:guilabel:`Instructions` tab of the form, write out the directions for the step in the operation.
 
-.. seealso::
-   :doc:`Instruction check <../../quality/quality_check_types/instructions_check>`
+.. note:
+   Further customizations can be made here on this form, beyond ordinary instructions, to also
+   include specific types of quality control points that carry specific (or complex) conditions. For
+   more details about quality control points refer to the following document: :doc:`Instruction
+   check <../../quality/quality_check_types/instructions_check>`
 
 .. image:: bill_configuration/steps.png
    :align: center
