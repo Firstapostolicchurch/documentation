@@ -12,3 +12,4 @@ Events
    events/event_essentials
    events/sell_tickets
    events/track_manage_talks
+   events/registration_desk
