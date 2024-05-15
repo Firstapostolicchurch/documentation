@@ -43,8 +43,9 @@ Components
 
 In the :guilabel:`Components` tab of a |BOM|, specify components used to manufacture the product by
 clicking :guilabel:`Add a line`. From the :guilabel:`Components` drop-down menu, select from
-existing products or create a new product by typing the name and selecting the :guilabel:`Create...`
-option.
+existing products or create a new product by typing the name and selecting either the
+:guilabel:`Create " "` option to quickly add the line item, or the :guilabel:`Create and edit...`
+option to add the component and continue to it's configuration form.
 
 .. image:: bill_configuration/component.png
    :align: center
@@ -76,7 +77,7 @@ operation are configured:
 
 - :guilabel:`Operation`: name of the operation.
 - :guilabel:`Work Center`: select existing locations to perform the operation, or create a new work
-  center by typing the name and selecting the :guilabel:`Create...` option.
+  center by typing the name and selecting the :guilabel:`Create " "` option.
 - :guilabel:`Apply on Variants`: specify if this operation is only available for certain product
   variants. If the operation applies to all product variants, leave this field blank.
 
