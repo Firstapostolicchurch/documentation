@@ -144,7 +144,9 @@ where the new manufacturing step can be created. Here, give the specific instruc
 .. image:: bill_configuration/steps.png
    :align: center
    :alt: Show the page to add a quality check.
-
+TODO:
+Miscellaneous
+---------------- 
 Add by-products to BoMs
 =======================
 
