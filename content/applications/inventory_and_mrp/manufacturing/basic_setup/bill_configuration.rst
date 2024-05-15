@@ -94,7 +94,7 @@ operation are configured:
 
 Include operation details in the :guilabel:`Work Sheet` tab. Choose :guilabel:`PDF` to attach a file
 or :guilabel:`Google Slide` to share a link. Select :guilabel:`Text` to type instructions in the
-:guilabel:`Description` text field.
+:guilabel:`Description` text field. TODO: Type `/` for a list of formatting options and features, including ChatGPT.
 
 .. image:: bill_configuration/create-operations.png
    :align: center
