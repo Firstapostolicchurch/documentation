@@ -6,8 +6,10 @@ Bill of materials
 .. |BOMs| replace:: :abbr:`BoMs (Bills of Materials)`
 .. |list| replace:: :icon:`fa-list-ul` :guilabel:`(list)`
 
-A *bill of materials* (or *BoM* for short) documents the component quantities needed for a product,
-often including production operations and step-by-step guidelines.
+A *bill of materials* (or *BoM* for short) documents specific components, along with their
+respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| as blueprints
+for manufactured goods and kits, and often include production operations and step-by-step
+guidelines, as well.
 
 BoM setup
 =========
