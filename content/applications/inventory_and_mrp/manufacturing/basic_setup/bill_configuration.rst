@@ -23,9 +23,11 @@ Then, specify :ref:`required components <manufacturing/basic_setup/setup-compone
 necessary, define any :ref:`manufacturing operations <manufacturing/basic_setup/setup-operations>`.
 
 .. note::
-   Alternatively, |BOMs| can also be created by clicking the :guilabel:`Bill of Materials` smart
-   button on any product form.
-
+.. tip::
+   Individual |BOMs| can also be quickly accessed or created by clicking the :guilabel:`Bill of
+   Materials` smart button on any product form, as accessible through the *Sales*, *Inventory*, and
+   *Manufacturing* apps, as well as through any internal links where a product is referenced (such
+   as in a field or a line item).
 .. figure:: bill_configuration/bom-example.png
    :align: center
    :alt: Show BoM for a product, with components listed.
@@ -81,26 +83,26 @@ operation are configured:
 - :guilabel:`Apply on Variants`: specify if this operation is only available for certain product
   variants. If the operation applies to all product variants, leave this field blank.
 
-.. seealso::
-   :doc:`Configuring BoMs for product variants <../advanced_configuration/product_variants>`
+  .. seealso::
+     :doc:`Configuring BoMs for product variants <../advanced_configuration/product_variants>`
 
 - :guilabel:`Duration Computation`: choose how time spent on the operation is tracked. Opt for
-  :guilabel:`Compute based on tracked time` use the operation's time tracker or :guilabel:`Set
-  duration manually` if operators can record and modify time themselves.
+  :guilabel:`Compute based on tracked time` to use the operation's time tracker or :guilabel:`Set
+  duration manually` if operators can record and modify time themselves. TODO: Choosing the Compute based on tracked time option enables the Based on last `10` work orders option, which automatically estimates the time to complete this operation based on the last few operations. Choosing Set duration manually enables the Default Duration field instead.
 - :guilabel:`Default Duration`: estimated amount of time to complete the operation; used for
   `planning manufacturing orders <https://www.youtube.com/watch?v=TK55jIq00pc>`_ and determining
   `work center availability <https://www.youtube.com/watch?v=3YwFlD97Bio>`_.
 - :guilabel:`Company`: specify the company the |BOM| is available in.
 
 Include operation details in the :guilabel:`Work Sheet` tab. Choose :guilabel:`PDF` to attach a file
-or :guilabel:`Google Slide` to share a link. Select :guilabel:`Text` to type instructions in the
+or :guilabel:`Google Slide` with *public* access to share a link. Select :guilabel:`Text` to type instructions in the
 :guilabel:`Description` text field. TODO: Type `/` for a list of formatting options and features, including ChatGPT.
 
 .. image:: bill_configuration/create-operations.png
    :align: center
    :alt: Fill out the Create Operations pop-up window.
 
-Finally, click :guilabel:`Save & Close` to close the pop-up window. To add more operations, click
+Finally, click :guilabel:`Save \& Close` to close the pop-up window. To add more operations, click
 :guilabel:`Save & New` and repeat the same steps above to configure another operation.
 
 .. note::
